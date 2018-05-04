@@ -2,11 +2,14 @@ package com.rainbow.mydemo;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable {
+
     int uid;
     String uname;
+
     @JSONField(format = "yyyy-MM-dd")
     Date birthday;
 
